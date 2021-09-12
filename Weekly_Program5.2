@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+  int n;
+  printf("Enter a number : ");
+  scanf("%d", &n);
+  int a = (n*2)-1;
+  int b = a;
+  int c = a;
+  int d = a;
+  int i = 1;
+  int u = 0;
+  while(b!=0){
+    printf("*");
+    b=b-1;
+  }
+  printf("\n");
+
+  while(i <= (n*2)-3){
+     while(u <= (n*2)-3){
+       if(i == u || u+2 == (n*2)-i){
+         printf("*");
+       }
+       else{
+         printf(" ");
+       }
+       u++;
+     }
+     if(i!=(n*2)-1){
+     printf("\n");
+    }
+    i++;
+    u = 0;
+  }
+  while(d!=0){
+    printf("*");
+    d=d-1;
+  }
+ return 0;
+}
